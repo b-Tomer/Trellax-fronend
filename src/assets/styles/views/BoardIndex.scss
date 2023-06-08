@@ -1,0 +1,88 @@
+.board-container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    background-image: url('../../img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+
+    ::-webkit-scrollbar {
+        width: 8px;
+        border-radius: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: $clrScrollTrans;
+        border-radius: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: $clrScrollTrans;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: $clrRailTrans;
+        border-radius: 8px;
+    }
+}
+
+
+.board-content {
+    // overflow: auto;
+    overflow-x: auto;
+    overflow-anchor: none;
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+    gap: 10px;
+    margin-block-start: 118px;
+    margin-block-end: 8px;
+    margin-inline-start: 15px;
+    .group-list {
+        display: flex;
+        padding-right: 100px;
+    }
+    
+    .group-draggable-list {
+        // display: flex;
+        // flex-wrap: nowrap;
+        // overflow-x: auto;
+        padding: 0;
+        // margin: 0;
+        list-style-type: none;
+        // width: fit-content;
+    }
+    
+    .group-card {
+        transition: all 0.3s ease;
+        user-select: none;
+    }
+    
+    .group-card.dragging {
+        transform: scale(1.05);
+        z-index: 1;
+    }
+
+
+    ::-webkit-scrollbar {
+        width: 8px;
+        border-radius: 8px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background-color: $clrSCROLL;
+        border-radius: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: $clrSCROLL;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background-color: $clrRAIL;
+        border-radius: 8px;
+    }
+}

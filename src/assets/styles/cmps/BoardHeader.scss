@@ -1,0 +1,115 @@
+.board-header-container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    background-color: $clrBH;
+    backdrop-filter: blur(4px);
+    line-height: 20px;
+    height: 65px;
+    margin: 0;
+    padding: 0;
+    margin-block-start: 48px;
+    align-content: center;
+    align-items: center;
+    color: $clr7;
+
+    @include for-normal-layout {
+        flex-direction: row;
+        height: 56px;
+    }
+
+    button {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        width: 2rem;
+        height: 2rem;
+        background-color: transparent;
+        padding: 6px;
+        border-radius: 3px;
+
+        &:hover {
+            background-color: $clrH;
+        }
+    }
+
+    .separator {
+        width: 0.5px;
+        height: 18px;
+        background-color: $clr7;
+        opacity: 0.16;
+        margin: 0;
+        margin-block-start: 6px;
+    }
+
+    .board-header-icon {
+        width: 16px;
+        height: 16px;
+
+        path {
+            fill: $clr7;
+        }
+    }
+
+    .board-header-left {
+        transform: translateY(4px);
+        display: flex;
+        justify-content: space-between;
+        padding-inline-start: 17px;
+
+        @include for-normal-layout {
+            transform: translateY(0px);
+        }
+
+        .btn-board-select {
+            width: 112.5px;
+            display: flex;
+            justify-content: space-between;
+            padding-inline: 12px;
+            padding-block: 6px;
+        }
+
+        .board-title {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 2rem;
+            font-weight: 700;
+            padding-inline: 10px;
+
+            @include for-normal-layout {
+                font-size: 1.125rem;
+                line-height: 2rem;
+                font-weight: 700;
+                padding-inline: 10px;
+            }
+        }
+    }
+
+    .board-header-right {
+        display: flex;
+
+        .btn-board-right {
+            display: flex;
+            width: auto;
+        }
+
+        .board-header-icon {
+            margin-inline-end: 5px;
+        }
+
+        *span {
+            font-size: 0px;
+        }
+
+        @include for-normal-layout {
+            justify-content: space-between;
+
+            *span {
+                font-size: 0.857rem;
+            }
+        }
+    }
+}

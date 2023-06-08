@@ -1,0 +1,188 @@
+.group-container {
+    position: relative;
+    flex-shrink: 0;
+    display: grid;
+    grid-template-rows: 47px 1fr 43px;
+    border-radius: $radius;
+    background-color: $clr2;
+    width: $groupWidth;
+    max-height: 98%;
+    height: fit-content;
+    overflow: hidden;
+    margin-inline:7px;
+
+    &.dragging{
+        rotate: 5deg;
+    }
+
+    ::-webkit-scrollbar-track {
+        margin: 0.5em;
+    }
+    
+    .group-header {
+        padding: 14px 8px;
+        display: flex;
+        justify-content: space-between;
+        
+        input {
+            height: fit-content;
+            padding-block: 5px;
+            margin: 0;
+            border-radius: 3px;
+            color: $clr7;
+            font-size: 14px;
+            font-weight: 600;
+            padding-inline-start: 10px;
+            
+            &:focus {
+                background-color: $clr1;
+                box-shadow: rgb(56, 139, 255) 0px 0px 0px 2px inset;
+            }
+        }
+
+        img {
+            width: 1rem;
+            height: 1rem;
+        }
+        
+        button {
+            width: 2rem;
+            height: 2rem;
+            padding: 6px;
+            border-radius: 3px;
+            
+            &:hover {
+                background-color: $clrH;
+            }
+        }
+    }
+
+    .group-content {
+        display: flex;
+        overflow: auto;
+        flex-direction: column;
+        padding: 0 4px;
+        margin: 0 4px;
+        gap: 3px;
+
+    }
+    
+    .group-footer {
+        display: flex;
+        margin: 8px;
+        align-items: center;
+        align-content: center;
+        
+        button {
+            color: $clr6;
+            display: flex;
+            align-items: end;
+            align-content: end;
+            width: 100%;
+            border-radius: 8px;
+            padding: 10px;
+            margin-block-end: 5px;
+
+            &:hover {
+                background: $clrH;
+            }
+        }
+    }
+}
+
+.add-group-container {
+    display: flex;
+    // align-content: center ;
+    align-items: center;
+    background-color: hsla(0, 2%, 92%, 0.771);
+    min-width: $groupWidth;
+    height: 48px;
+    border-radius: $radius;
+    padding: 8px;
+    height: fit-content;
+
+    &:hover {
+        cursor: pointer;
+        background-color: hsla(0, 0%, 95%, 0.887);
+    }
+
+    .add-list-content-closed {
+        cursor: pointer;
+    }
+
+    .add-list-content-opened {
+        width: 100%;
+    }
+}
+
+.add-list-input {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+        sans-serif;
+    background-color: #fff;
+    border: none;
+    border-radius: 3px;
+    // box-shadow: 0 1px 0 rgba(9, 30, 66, 0.251);
+    height: 40px;
+    margin-bottom: 8px;
+    padding: 9px 8px;
+    width: 100%;
+    padding-inline: 10px;
+    font-size: 14px;
+    color: $clr7;
+}
+
+.list-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+
+    path {
+        fill: $clr5;
+    }
+}
+
+.add-item-btn {
+    background-color: $clrBTN;
+    color: #fff;
+    margin-right: 4px;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    height: 32px;
+    padding: 6px 12px;
+
+    &:hover {
+        background-color: $clrBtnH;
+    }
+}
+
+.icon-big {
+    width: 2rem;
+    height: 2rem;
+}
+
+.add-btns {
+    display: flex;
+    margin-inline-start: 8px;
+
+    .svg-holder {
+        align-items: center;
+        display: inline-flex;
+        height: 2rem;
+        justify-content: center;
+        width: 2rem;
+        background-color: inherit;
+        padding: 0;
+    }
+}
+
+.txt-container {
+    padding: 8px 8px 4px 12px;
+    text-decoration: none;
+    color: $clr7;
+    border-radius: 3px;
+    border: none;
+    box-shadow: 0px 1px 1px #091e4240, 0px 0px 1px #091e424f, none;
+    margin-bottom: 8px;
+}
